@@ -1,7 +1,7 @@
 import styles from './Hero.Styles.module.css'
-import heroImage from '../../assets/ProfilePicture-enhanced1.jpg'
+import heroImage from '../../assets/ProfilePicture.jpg'
 import sun from '../../assets/sun.svg'
-import moon from '../../assets/moon.svg'
+import moon from '../../assets/moonp.png'
 import twitterLight from '../../assets/twitterLight.svg'
 import twitterDark from '../../assets/twitterDark.svg'
 import githubLight from '../../assets/githubLight.svg'
@@ -26,13 +26,13 @@ function hero() {
 
     <div className={styles.colorModeContainer}>
 
-        <img className={styles.hero} src={heroImage} alt="Santty's profile picture" style={{ width: '250px', height: '270px', borderRadius: '50%' }}/>
+        <img className={styles.hero} src={heroImage} alt="Santty's profile picture" />
 
         <img className={styles.colorMode} 
         src={themeIcon} 
         alt="Color mode icon"
         onClick={toggleTheme}
-        style={{ width: '50px', height: '50px'}}
+        
         />
 
 
@@ -58,7 +58,7 @@ function hero() {
             </a>
         </span>
 
-        <p>
+        <p className={styles.description}>
         Passionate systems engineering student dedicated to continuous learning, programming, and personal growth, eager to develop innovative solutions that make a difference.
         </p>
         <a href={CV} target='_blank' download>
