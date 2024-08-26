@@ -1,14 +1,41 @@
 import styles from './Hero.Styles.module.css'
 import heroImage from '../../assets/ProfilePicture-enhanced1.jpg'
-import themeIcon from '../../assets/sun.svg'
+import sun from '../../assets/sun.svg'
+import moon from '../../assets/moon.svg'
+import twitterLight from '../../assets/twitterLight.svg'
+import twitterDark from '../../assets/twitterDark.svg'
+import githubLight from '../../assets/githubLight.svg'
+import githubDark from '../../assets/githubDark.svg'
+import linkedinLight from '../../assets/linkedinLight.svg'
+import linkedinDark from '../../assets/linkedinDark.svg'
+import CV from '../../assets/CV-SGR-spanish.pdf'
+import { useTheme } from '../../common/Theme.context'
+
 
 function hero() {
+
+  const {theme, toggleTheme} = useTheme();
+
+  const themeIcon = theme === 'light' ? sun : moon;
+  const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
+  const githubIcon = theme === 'light' ? githubLight : githubDark;
+  const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+
   return (
   <section id='hero' className={styles.container}>
+
     <div className={styles.colorModeContainer}>
 
-        <img className={styles.hero} src={heroImage} alt="Santty's profile picture" />
-        <img className={styles.colorMode} src={themeIcon} alt="Color mode icon" />
+        <img className={styles.hero} src={heroImage} alt="Santty's profile picture" style={{ width: '250px', height: '270px', borderRadius: '50%' }}/>
+
+        <img className={styles.colorMode} 
+        src={themeIcon} 
+        alt="Color mode icon"
+        onClick={toggleTheme}
+        style={{ width: '50px', height: '50px'}}
+        />
+
+
 
     </div>
 
@@ -18,6 +45,27 @@ function hero() {
         <br />    
         Giraldo
         </h1>
+        <h2>Backend Developer</h2>
+        <span>
+            <a href="https://twitter.com" target='_blank'>
+              <img src={twitterIcon} alt="Twitter Icon" style={{ width: '50px', height: '50px'}} />
+            </a>
+            <a href="https://github.com/santiagogr05" target='_blank'>
+              <img src={githubIcon} alt="GitHub Icon" style={{ width: '50px', height: '50px'}}/>
+            </a>
+            <a href="https://www.linkedin.com/in/santiago-giraldo-ramírez/" target='_blank' >
+              <img src={linkedinIcon} alt="LinkedIn Icon" style={{ width: '50px', height: '50px'}} />
+            </a>
+        </span>
+
+        <p>
+        Passionate systems engineering student dedicated to continuous learning, programming, and personal growth, eager to develop innovative solutions that make a difference.
+        </p>
+        <a href={CV} target='_blank' download>
+          <button className='hover' >
+            Resume
+          </button>
+        </a>
 
     </div>
 
