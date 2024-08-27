@@ -20,7 +20,8 @@
             margin: 0;
 
             img {
-                width: 30px;
+                width: 50px;
+                height: 50px;
             }
         }
     }
@@ -78,6 +79,80 @@
     gap: 20px;
 }
 
+@media (width >= 800px) {
+    .container {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .hero {
+            max-width: 350px;
+            width: 350px;
+        }
+
+        button {
+            width: 140px;
+            height: 55px;
+        }
+
+        span {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+    
+            a {
+                margin: 0;
+    
+                img {
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        }
+    }
+
+    .colorMode {
+        position: absolute;
+        right: 0;
+        width: 40px;
+    }
+}
+
+@media (width >= 1400px) {
+    .container {
+        
+        .hero {
+            max-width: 400px;
+            width: 400px;
+        }
+
+        button {
+            width: 170px;
+            height: 60px;
+        }
+
+        span {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+    
+            a {
+                margin: 0;
+    
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+
+    .colorMode {
+        position: absolute;
+        right: 0;
+        width: 50px;
+    }
+}
 
 
 

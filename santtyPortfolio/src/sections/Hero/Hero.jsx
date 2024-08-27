@@ -48,13 +48,13 @@ function hero() {
         <h2>Backend Developer</h2>
         <span>
             <a href="https://twitter.com" target='_blank'>
-              <img src={twitterIcon} alt="Twitter Icon" style={{ width: '50px', height: '50px'}} />
+              <img src={twitterIcon} alt="Twitter Icon"/>
             </a>
             <a href="https://github.com/santiagogr05" target='_blank'>
-              <img src={githubIcon} alt="GitHub Icon" style={{ width: '50px', height: '50px'}}/>
+              <img src={githubIcon} alt="GitHub Icon"/>
             </a>
             <a href="https://www.linkedin.com/in/santiago-giraldo-ramírez/" target='_blank' >
-              <img src={linkedinIcon} alt="LinkedIn Icon" style={{ width: '50px', height: '50px'}} />
+              <img src={linkedinIcon} alt="LinkedIn Icon"/>
             </a>
         </span>
 
