@@ -9,10 +9,11 @@ import githubDark from '../../assets/githubDark.svg'
 import linkedinLight from '../../assets/linkedinLight.svg'
 import linkedinDark from '../../assets/linkedinDark.svg'
 import CV from '../../assets/CV-SGR-spanish.pdf'
+import Button from '../ButtonLenguage/Button'
 import { useTheme } from '../../common/Theme.context'
 
 
-function hero() {
+function heroSpanish() {
 
   const {theme, toggleTheme} = useTheme();
 
@@ -34,6 +35,7 @@ function hero() {
         onClick={toggleTheme}
         
         />
+        <Button />
 
 
 
@@ -45,7 +47,7 @@ function hero() {
         <br />    
         Giraldo
         </h1>
-        <h2>Backend Developer</h2>
+        <h2>Desarrollador Backend</h2>
         <span>
             <a href="https://twitter.com" target='_blank'>
               <img src={twitterIcon} alt="Twitter Icon"/>
@@ -59,7 +61,7 @@ function hero() {
         </span>
 
         <p className={styles.description}>
-        Passionate systems engineering student dedicated to continuous learning, programming, and personal growth, eager to develop innovative solutions that make a difference.
+        Apasionado estudiante de ingeniería de sistemas, enfocado en la mejora constante, la programación y el desarrollo personal, con el objetivo de crear soluciones que marquen la diferencia.
         </p>
         <a href={CV} target='_blank' download>
           <button className='hover' >
@@ -73,4 +75,4 @@ function hero() {
   )
 }
 
-export default hero
+export default heroSpanish
