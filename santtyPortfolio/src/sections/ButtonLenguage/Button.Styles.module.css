@@ -1,0 +1,36 @@
+.buttonContainer {
+    display: flex;
+    border-radius: 5px;
+    /* overflow: hidden; */
+    width: 120px;
+    margin-top: 50px;
+    margin-left: 135px;
+  }
+  
+  .languageButton {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f0f0f0; /* Default background color */
+    transition: background-color 0.3s;
+  }
+  
+  /* .languageButton:hover {
+    background-color: #e0e0e0; /* Hover color 
+  } */
+  
+  .active {
+    background-color: #007bff; /* Active color */
+    color: white;
+  }
+  
+  .languageButton:first-child {
+    border-right: 1px solid #ccc;
+    height: 45px;
+  }
+  .languageButton:last-child {
+    border-right: 1px solid #ccc;    
+    height: 45px;
+  }
+  
